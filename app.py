@@ -61,10 +61,11 @@ graph1 = dcc.Graph(figure=fig1)
 graph2 = dcc.Graph(figure=fig2)
 
 app = dash.Dash()
+server=app.server
 app.layout = html.Div([
     html.H1('GRAPHS', style={'textAlign': 'center', 'color': '#636EFA'}),
     html.Img(src='/assets/1.png', style={'width': '50%'})
 ])
 if __name__ == '__main__':
-    app.run_server(port=8192)
-server=app.server
+    app.run_server(debug==True)
+
